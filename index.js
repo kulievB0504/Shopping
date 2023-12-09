@@ -117,3 +117,58 @@ function reboot(goods) {
        
     }
 }
+
+const productsDiv = document.querySelector('.productsWrapper')
+
+const productsBlock = document.createElement('div')
+const product_Img = document.createElement('div')
+const productImg = document.createElement('img')
+
+const productTitle = document.createElement('div')
+const productName = document.createElement('h3')
+const productParagraph = document.createElement('p')
+
+const productCounterBlock= document.createElement('div')
+const productCounter = document.createElement('div')
+const prev = document.createElement('span')
+const nums = document.createElement('span')
+const count = document.createElement('span')
+
+const productPrice = document.createElement('div')
+const price = document.createElement('span')
+
+productsBlock.classList.add('productsBlock')
+product_Img.classList.add('product_Img')
+productImg.setAttribute('src', 'https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ffd253a59-c094-468e-bb31-bda637aa9dcd.jpg&w=1920&q=75')
+productTitle.classList.add('product__title')
+productName.classList.add('product_name')
+productName.innerHTML ='Сырная пицца маленькая'
+productParagraph.classList.add('product_paragraph')
+productParagraph.innerHTML= 'Толстый'
+productCounterBlock.classList.add('product_counter_block')
+productCounter.classList.add('product_counter')
+prev.classList.add('prev')
+prev.innerHTML = '-'
+nums.classList.add('nums')
+nums.innerHTML = '1'
+count.classList.add('count')
+count.innerHTML = '+'
+productPrice.classList.add('product_price')
+price.classList.add('span')
+price.innerHTML = '39 000'
+
+productsDiv.append(productsBlock)
+productsBlock.append(product_Img)
+product_Img.append(productImg)
+
+
+productsBlock.append(productTitle)
+productTitle.append(productName, productParagraph)
+
+
+productsDiv.append(productCounterBlock)
+productCounterBlock.append(productCounter)
+productCounter.append(prev, nums, count)
+
+productCounterBlock.append(productPrice)
+productPrice.append(price)
