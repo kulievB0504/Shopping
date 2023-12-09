@@ -304,3 +304,8 @@ button.show__btn {
     flex-direction: column;
     gap: 10px;
 }
+
+.cancle {
+    display: flex;
+    justify-content: space-between;
+}
